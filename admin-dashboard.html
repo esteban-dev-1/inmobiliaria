@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <title>Panel de Administrador - Inmobiliaria</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Bienvenido Administrador</h1>
+        <nav>
+            <a href="login.html" id="logout">Cerrar Sesión</a>
+        </nav>
+    </header>
+    <main>
+        <section class="admin-controls">
+            <h2>Gestión de Propiedades</h2>
+            <form id="addPropertyForm">
+                <div class="form-group">
+                    <label for="direccion">Dirección:</label>
+                    <input type="text" id="direccion" name="direccion" required>
+                </div>
+                <div class="form-group">
+                    <label for="tipo">Tipo:</label>
+                    <input type="text" id="tipo" name="tipo" required>
+                </div>
+                <div class="form-group">
+                    <label for="habitaciones">Habitaciones:</label>
+                    <input type="number" id="habitaciones" name="habitaciones" required>
+                </div>
+                <div class="form-group">
+                    <label for="superficie">Superficie (m²):</label>
+                    <input type="number" id="superficie" name="superficie" step="0.01" required>
+                </div>
+                <div class="form-group">
+                    <label for="precio">Precio (€):</label>
+                    <input type="number" id="precio" name="precio" step="0.01" required>
+                </div>
+                <div class="form-group">
+                    <label for="imagen_url">URL de la Imagen:</label>
+                    <input type="url" id="imagen_url" name="imagen_url" required>
+                </div>
+                <button type="submit" class="btn">Agregar Propiedad</button>
+            </form>
+        </section>
+        <section class="requests-container">
+            <h2>Solicitudes de Propiedades</h2>
+            <div id="requestsList">
+            </div>
+        </section>
+    </main>
+    <script src="js/script.js"></script>
+</body>
+</html>
